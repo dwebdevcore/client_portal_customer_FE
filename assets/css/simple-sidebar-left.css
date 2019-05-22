@@ -1,0 +1,236 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+body.noscroll {
+  overflow: hidden;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#wrapper .custom-toggler {
+	opacity: 1;
+	transition: all 0.2s ease;
+}
+#wrapper.toggled .custom-toggler {
+	opacity: 0;
+}
+
+#wrapper.toggled {
+  padding-left: 0px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 280px;
+  width: 0;
+  height: 100%;
+  margin-left: -280px;
+  overflow-y: auto;
+  background: #02142B;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 280px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 0;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -280px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 44px;
+	background: rgba(255,255,255,0.05);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar-nav li.li-header {
+	color: #BBCDE5;
+	text-indent: 20px;
+	line-height: 29px;
+	font-size: 12px;
+	letter-spacing: .1em;
+	background: transparent;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	text-transform: uppercase;
+}
+.sidebar-nav li.li-footer {
+	color: #BBCDE5;
+	text-indent: 20px;
+	line-height: 30px;
+	font-size: 13px;
+	background: transparent;
+	border-bottom: none;
+}
+.sidebar-nav li.li-footer a {
+	color: #BBCDE5;
+}
+.sidebar-nav li.li-footer a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: transparent;
+	padding-left: 5px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.sidebar-nav li.active a {
+	border-left: 6px solid #00a1e4;
+	color: #fff;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sidebar-nav li a:hover {
+	text-decoration: none;
+	color: #00a1e4;
+	background: rgba(255,255,255,0.1);
+	padding-left: 5px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.sidebar-nav li a.no-hover:hover {
+	padding-left: 0px;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #BBCDE5;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+#page-content-overlay {
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+#page-content-overlay.toggled {
+	background: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 0;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    width: 0;
+    left: 280px;
+    margin-left: -280px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 280px;
+  }
+  #page-content-wrapper {
+    padding: 0;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+@media(min-width:991px) {
+	#sidebar-wrapper {
+	    width: 0;
+	    left: 320px;
+	    margin-left: -320px;
+	  }
+	#wrapper.toggled #sidebar-wrapper {
+		width: 320px;
+	}
+	#wrapper.toggled #page-content-wrapper {
+	  position: absolute;
+	  margin-right: -320px;
+	}
+	.sidebar-nav {
+		width: 320px;
+	}
+}
+@media(min-width:1199px) {
+	#sidebar-wrapper {
+	    width: 0;
+	    left: 380px;
+	    margin-left: -380px;
+	  }
+	#wrapper.toggled #sidebar-wrapper {
+		width: 380px;
+	}
+	#wrapper.toggled #page-content-wrapper {
+	  position: absolute;
+	  margin-right: -380px;
+	}
+	.sidebar-nav {
+		width: 380px;
+	}
+}
